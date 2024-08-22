@@ -1,4 +1,4 @@
-import { expect, selectors, type Locator, type Page } from "@playwright/test";
+import { expect, selectors, Locator, Page } from "@playwright/test";
 
 class SaucelabsLoginPage {
   readonly page: Page;
@@ -17,6 +17,7 @@ class SaucelabsLoginPage {
     this.swagLabsLabel = page.getByText("Swag Labs");
     this.saucelabUrl = "/";
   }
+  
   //Functions
   //Url Navigation function
   async goToSaucelabUrl(): Promise<void> {
